@@ -1,6 +1,6 @@
-# 🚶‍♂️ Friend Errand — Rare Friends Vibeathon Prototype
+# 🚶‍♂️ Friend Errand V2 — Rare Friends Vibeathon
 
-> An elite-tier, interactive web3 mini-game and protocol job hub engineered for the **Rare Friends Vibeathon**, featuring official integration with **Friend #335482**.
+> An elite-tier, interactive Web3 mini-game engineered for the **Rare Friends Vibeathon**, featuring official integration with **Friend #335482**. Now upgraded to **V2** with AI Speech Synthesis and Web3 Wallet Support!
 
 ---
 
@@ -9,11 +9,12 @@
 
 ---
 
-## 🚀 Core Features
-- **Dynamic NFT Verification:** Direct SVG asset rendering fetched straight from verified OpenSea metadata URIs.
-- **RF Protocol Economy:** Balanced ticket-cost vs. multi-tiered payout matrix (0 RF up to Legendary 8.0 RF jackpots).
-- **Seamless Playability:** Built-in automated faucet (`Claim Free RF`) to ensure continuous gameplay loops without hard blocks.
-- **Responsive Architecture:** Fully optimized mobile-first UI framework. *(Pro-tip: For the ultimate desktop-grade dashboard layout on mobile devices, simply enable **"Desktop Site"** in your mobile browser).*
+## 🚀 V2 Elite Features (New Update)
+- **Dual Wallet Integration:** Connect your real Web3 wallet (fully optimized for MetaMask, Bitget, and OKX in-app dApp browsers) or seamlessly test the game using the built-in **Demo Mode**.
+- **Interactive AI Voice Feedback:** Integrated native browser **Speech Synthesis API** that provides futuristic, deep robotic voice alerts for wallet connections, gameplay actions, and errors.
+- **Sustainable Tokenomics (30/70 Split):** A perfectly balanced Web3 economic model where 30% of every reward is burned (deflationary for the protocol), and 70% goes directly to the player's balance.
+- **XP & Leveling System:** Friend #335482 now gains +25 XP for every errand. Fill the XP bar to level up and track your on-chain progress!
+- **Immersive UI/UX & Gamification:** Dark-themed responsive design featuring dynamic Confetti animations for "Legendary" vault drops and interactive UI elements.
 
 ---
 
@@ -23,10 +24,11 @@
 ---
 
 ## 🕹️ How to Play
-1. **Check Balance:** Ensure you have an active RF token balance (Starts with 10.00 RF).
-2. **Dispatch Errand:** Click **"Start Errand Job"** (Costs 1.0 RF per ticket).
-3. **Await Outcome:** Your Friend navigates through town via a secure protocol delay loop, returning with an encrypted reward tier.
-4. **Refuel (Faucet):** If your balance drops below the threshold, utilize the automated `Claim Free RF (+5)` protocol override to resume operations instantly.
+1. **Connect Wallet:** Choose **'Connect'** for a real Web3 wallet or **'Demo'** to use the in-game testing wallet. The AI voice will confirm your connection.
+2. **Check Stats:** Monitor your $RF balance, current Level, and XP progress bar.
+3. **Dispatch Errand:** Select either a Standard Errand (1.0 $RF) or High Risk Heist (2.0$RF) and click Start.
+4. **Earn & Burn:** Wait for the robotic protocol to process your run. Earn rewards, gain XP, and contribute to the 30% community burn automatically!
+5. **Refuel (Faucet):** If your balance drops, utilize the automated `Claim Free RF (+5)` protocol override (Limit: 3 claims) to resume operations instantly.
 
 ---
-*Engineered with precision for the Rare Friends ecosystem.*
+*Engineered with precision for the Rare Friends ecosystem. Ready for Vibeathon!*
