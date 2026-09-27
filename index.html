@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend Errand - Rare Friends VIP</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #0d0d12, #1a1a24); 
+            color: #fff; 
+            text-align: center; 
+            margin: 0;
+            padding: 20px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container { 
+            width: 100%;
+            max-width: 420px; 
+            background: rgba(26, 26, 36, 0.9); 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8); 
+        }
+        h2 { 
+            margin-top: 0; 
+            color: #00ffcc; 
+            letter-spacing: 1px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 10px; 
+            font-size: 22px;
+        }
+        .title-nft-img {
+            width: 28px;
+            height: 28px;
+            background: #000;
+            border-radius: 6px;
+            object-fit: contain;
+            border: 1px solid #00ffcc;
+        }
+        .nft-card {
+            background: #121218;
+            border: 2px dashed #00ffcc;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-align: left;
+        }
+        .nft-img {
+            width: 70px;
+            height: 70px;
+            background: #000;
+            border-radius: 10px;
+            object-fit: contain;
+            border: 1px solid #00ffcc;
+        }
+        .nft-info h4 { margin: 0 0 5px 0; color: #fff; font-size: 16px; }
+        .nft-info p { margin: 0; color: #00ffcc; font-size: 13px; }
+        .stats-box { 
+            display: flex;
+            justify-content: space-between;
+            background: #161622; 
+            padding: 12px 15px; 
+            border-radius: 10px; 
+            margin: 15px 0;
+            font-size: 15px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .btn { 
+            background: linear-gradient(135deg, #00ffcc, #00b386); 
+            color: #000; 
+            font-weight: bold;
+            border: none; 
+            padding: 15px; 
+            font-size: 16px; 
+            border-radius: 12px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,255,204,0.4);
+        }
+        .btn:active { transform: scale(0.98); }
+        .btn:disabled { background: #444; color: #888; box-shadow: none; cursor: not-allowed; }
+        .claim-btn {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.4);
+        }
+        #log { 
+            margin-top: 20px; 
+            font-size: 15px; 
+            padding: 12px;
+            background: #121218;
+            border-radius: 10px;
+            min-height: 55px; 
+            color: #d1d8e0;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pulse { animation: pulse 1.5s infinite; }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>
+            <img src="https://raw2.seadn.io/robinhood/0x14c49e6118f46525de9ab41a51cbaa3c6ebf181d/29d5a25f2be029bbf85870b9dccd00/bf29d5a25f2be029bbf85870b9dccd00.svg" alt="NFT Icon" class="title-nft-img">
+            Friend Errand
+        </h2>
+        <p style="font-size: 13px; color: #00ffcc;">RF Protocol Hub</p>
+        
+        <div class="nft-card">
+            <img src="https://raw2.seadn.io/robinhood/0x14c49e6118f46525de9ab41a51cbaa3c6ebf181d/29d5a25f2be029bbf85870b9dccd00/bf29d5a25f2be029bbf85870b9dccd00.svg" alt="Friend #335482" class="nft-img" id="nftImage">
+            <div class="nft-info">
+                <h4>Friend #335482</h4>
+                <p>Status: Ready for Errand</p>
+            </div>
+        </div>
+
+        <div class="stats-box">
+            <div>RF Balance: <strong id="rfBalance" style="color: #00ffcc;">10.00</strong> RF</div>
+            <div>Ticket Cost: <strong style="color: #ff4757;">1.0 RF</strong></div>
+        </div>
+
+        <button class="btn" id="actionBtn" onclick="startErrand()">Start Errand Job</button>
+        <button class="btn claim-btn" id="claimBtn" onclick="claimTokens()" style="display: none;">Claim Free RF (+5)</button>
+        
+        <div id="log">Select your Friend and start an errand from the job board!</div>
+    </div>
+
+    <script>
+        let balance = 10.00;
+        let isWorking = false;
+
+        function startErrand() {
+            if (isWorking) return;
+            if (balance < 1.0) {
+                document.getElementById('log').innerText = "❌ Insufficient RF balance! Claim free tokens below.";
+                return;
+            }
+
+            balance -= 1.0;
+            updateUI();
+            isWorking = true;
+            
+            const btn = document.getElementById('actionBtn');
+            btn.disabled = true;
+            
+            const logBox = document.getElementById('log');
+            logBox.classList.add('pulse');
+            logBox.innerText = "⏳ Friend is walking through town and performing the errand...";
+
+            setTimeout(() => {
+                let rand = Math.random() * 100;
+                let resultText = "";
+                let reward = 0;
+
+                if (rand < 20) {
+                    resultText = "🎒 Empty bag! Nothing found (0 RF).";
+                    reward = 0;
+                } else if (rand < 55) {
+                    resultText = "✉️ Mail run successful! Reward: +0.4 RF";
+                    reward = 0.4;
+                } else if (rand < 80) {
+                    resultText = "🛍️ Shop drop complete! Reward: +0.9 RF";
+                    reward = 0.9;
+                } else if (rand < 92) {
+                    resultText = "💎 Treasure hunt jackpot! Reward: +2.0 RF";
+                    reward = 2.0;
+                } else if (rand < 99) {
+                    resultText = "⛏️ Mine haul epic drop! Reward: +3.5 RF";
+                    reward = 3.5;
+                } else {
+                    resultText = "🏛️ Vault find! LEGENDARY Reward: +8.0 RF!";
+                    reward = 8.0;
+                }
+
+                balance += reward;
+                updateUI();
+                
+                logBox.classList.remove('pulse');
+                logBox.innerHTML = resultText;
+                btn.disabled = false;
+                isWorking = false;
+            }, 1800);
+        }
+
+        function claimTokens() {
+            balance += 5.0;
+            updateUI();
+            document.getElementById('log').innerText = "🎉 Successfully claimed +5 free RF tokens!";
+        }
+
+        function updateUI() {
+            document.getElementById('rfBalance').innerText = balance.toFixed(2);
+            const claimBtn = document.getElementById('claimBtn');
+            if (balance < 1.0) {
+                claimBtn.style.display = 'block';
+            } else {
+                claimBtn.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
