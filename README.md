@@ -1,6 +1,11 @@
-# 🚶‍♂️ Friend Errand V2 — Rare Friends Vibeathon
+# <img src="https://raw2.seadn.io/robinhood/0x14c49e6118f46525de9ab41a51cbaa3c6ebf181d/29d5a25f2be029bbf85870b9dccd00/bf29d5a25f2be029bbf85870b9dccd00.svg" width="40" style="border-radius:50%; vertical-align: middle;"> Friend Errand V2 — Rare Friends Vibeathon
 
 > An elite-tier, interactive Web3 mini-game engineered for the **Rare Friends Vibeathon**, featuring official integration with **Friend #335482**. Now upgraded to **V2** with AI Speech Synthesis and Web3 Wallet Support!
+
+---
+
+## 🎮 Play Game Live
+- **Playable Preview Link:** [https://kashif1623.github.io/friend-errand-vibeathon/](https://kashif1623.github.io/friend-errand-vibeathon/)[span_1](start_span)[span_1](end_span)
 
 ---
 
@@ -18,7 +23,8 @@
 
 ---
 
-## 🔗 Live Demos & Official Links
+## 🔗 Official Links & Resources
+- **Playable Preview Link:** [https://kashif1623.github.io/friend-errand-vibeathon/](https://kashif1623.github.io/friend-errand-vibeathon/)[span_2](start_span)[span_2](end_span)
 - **Official OpenSea Asset:** [Friend #335482 OpenSea Page](https://opensea.io/item/robinhood/0x14c49e6118f46525de9ab41a51cbaa3c6ebf181d/335482)
 
 ---
