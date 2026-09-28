@@ -5,7 +5,7 @@
 ---
 
 ## 🎮 Play Game Live
-- **Playable Preview Link:** [https://kashif1623.github.io/friend-errand-vibeathon/](https://kashif1623.github.io/friend-errand-vibeathon/)[span_1](start_span)[span_1](end_span)
+- **Playable Preview Link:** [https://friend-errand-v2.vercel.app](https://friend-errand-v2.vercel.app)
 
 ---
 
@@ -24,7 +24,7 @@
 ---
 
 ## 🔗 Official Links & Resources
-- **Playable Preview Link:** [https://kashif1623.github.io/friend-errand-vibeathon/](https://kashif1623.github.io/friend-errand-vibeathon/)[span_2](start_span)[span_2](end_span)
+- **Playable Preview Link:** [https://friend-errand-v2.vercel.app](https://friend-errand-v2.vercel.app)
 - **Official OpenSea Asset:** [Friend #335482 OpenSea Page](https://opensea.io/item/robinhood/0x14c49e6118f46525de9ab41a51cbaa3c6ebf181d/335482)
 
 ---
